@@ -4,7 +4,7 @@ description: 'A Journal about automation using different platforms'
 url: 'http://weiyentan.github.io'
 baseurl: ''
 # google_analytics: 'UA-XXXXXX-X'
-disqus_shortname: weiyentan.github.io
+disqus_shortname: https-weiyentan-github-io
 
 author:
   name: 'Wei-Yen Tan'
