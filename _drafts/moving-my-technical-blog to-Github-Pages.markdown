@@ -37,4 +37,4 @@ C:\Users\weiyentan\Documents\GitHub\weiyentan.github.io
 ```
 
 ## Gotchas
-This particular layout is unique to this website because its based on the jekyll-uno theme. In order for me to use a particular theme I found that the best way to do it is to clone the repository and copy that over. In the next post I will explain the steps that I took 
+This particular layout is unique to this website because its based on the jekyll-uno theme. In order for me to use a particular theme I found that the best way to do it is to clone the repository and copy that over. In the next post I will explain the steps that I took.
