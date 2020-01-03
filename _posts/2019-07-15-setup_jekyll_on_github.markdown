@@ -38,4 +38,12 @@ If there is a tag or categories html page in the layouts then most likely the au
 There is no inbuilt commenting in Jekyll like Wordpress. However you can integrate external commenting systems into Jekyll.  In this case I used Disqus. So you have to create a Disqus account.
 ![example_Jekyll_structure](/assets/disqus_comment_setup.jpg)
 
-Fill in the details and website name and category in disqus. Once you created put the name of your disqus name into your disqus_shortname variable in _config.yml in the root directory of the repository.
+Fill in the details and website name and category in disqus. Once you created put the name of your disqus name into your disqus_shortname variable in _config.yml in the root directory of the repository. In config.yml you use:
+```
+disqus_shortname: https-weiyentan-github-io
+```
+under site setting.
+
+
+I hope that helps anyone that is planning to use Github Pages.
+
