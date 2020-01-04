@@ -6,7 +6,7 @@ categories: [learning]
 tags: [powershell]
 ---
 
-I am part of a Powershell telegraph group for Linux users called [PowershellonLinux](https://t.me/PowershellOnLinux) on Telegram. I am a windows engineer by heart so I was curious to find out why linux people will be interested in Powershell. What I discovered is for another post but  one of the conversations that we had was discussing how to do basic 101 things with Powershell. 
+I am part of a Powershell telegram group for Linux users called [PowershellonLinux](https://t.me/PowershellOnLinux) on Telegram. I am a windows engineer by heart so I was curious to find out why linux people will be interested in Powershell. What I discovered is for another post but  one of the conversations that we had was discussing how to do basic 101 things with Powershell. 
 
 After much discussion one of the member's suggested that I consolidate that into a series of blog posts. I did touch this on my archived blog but I feel that this can be revisited.
 
