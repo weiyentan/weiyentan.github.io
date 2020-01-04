@@ -160,9 +160,9 @@ get-childitem c:\windows\temp | get-member -Type Properties
 which gave us the properties for the object. However if you look at what came back, they were of two type of objects.
 
 One was a directory:
-
+```
 TypeName: System.IO.DirectoryInfo
-
+```
 and the second was a file type:
 System.IO.FileInfo
 
