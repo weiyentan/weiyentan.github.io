@@ -6,23 +6,23 @@ categories: [learning]
 tags: [powershell]
 ---
 
-I am part of a Powershell telegram group for Linux users called [PowershellonLinux](https://t.me/PowershellOnLinux) on Telegram. I am a windows engineer by heart so I was curious to find out why linux people will be interested in Powershell. What I discovered is for another post but  one of the conversations that we had was discussing how to do basic 101 things with Powershell. 
+I am part of a PowerShell telegram group for Linux users called [PowershellonLinux](https://t.me/PowershellOnLinux) on Telegram. I am a windows engineer by heart so I was curious to find out why linux people will be interested in PowerShell. What I discovered is for another post but  one of the conversations that we had was discussing how to do basic 101 things with PowerShell. 
 
 After much discussion one of the member's suggested that I consolidate that into a series of blog posts. I did touch this on my archived blog but I feel that this can be revisited.
 
-This will be a few part mini post series. This post will be focused on the basics to get started with Powershell. 
+This will be a few part mini post series. This post will be focused on the basics to get started with PowerShell. 
 
-I started learning Powershell and went under the virtual grand tutelage of [@concentrateddon](https://twitter.com/concentrateddon) through video tutorials of CBT nuggets at the time which was in 2015. This is by far the best training materials that I have started with in my Powershell learning career. 
+I started learning PowerShell and went under the virtual grand tutelage of [@concentrateddon](https://twitter.com/concentrateddon) through video tutorials of CBT nuggets at the time which was in 2015. This is by far the best training materials that I have started with in my Powershell learning career. 
 
-Commands in Powershell are called cmdlets. According to [@jsnover](https://twitter.com/jsnover) There is some trivia behind this. That is because cmdlets is unique. If you look on any search engine and you type in cmdlet the results that you get returned back is Powershell. 
+Commands in PowerShell are called cmdlets. According to [@jsnover](https://twitter.com/jsnover) There is some trivia behind this. That is because cmdlets is unique. If you look on any search engine and you type in cmdlet the results that you get returned back is Powershell. 
 
 For Microsoft that is instant SEO! 
 
-Powershell is a command line shell, very much the same as Bash in Linux or DOS yet at the same time can form the basis of a very powerful scripting language.
+PowerShell is a command line shell, very much the same as Bash in Linux or DOS yet at the same time can form the basis of a very powerful scripting language.
 
-Powershell follows a verb-noun structure. There are approved verbs that is 'approved'. These aid in the discovery of commands as you shall see in the post below.
+PowerShell follows a verb-noun structure. There are approved verbs that is 'approved'. These aid in the discovery of commands as you shall see in the post below.
 
-When people start learning Powershell I would suggest that there are three commands that people start to learn to get them started.
+When people start learning PowerShell I would suggest that there are three commands that people start to learn to get them started.
 
 ```
 Get-Command
@@ -31,7 +31,7 @@ Get-Member
 ```
 
 ### Get-Command
-Get-Command is used  for searching for a command. Because of the approved verbs we can easily search for commands that suit what we need. Take for example finding a command that can find active directory users. We can type in the Powershell console:
+Get-Command is used  for searching for a command. Because of the approved verbs we can easily search for commands that suit what we need. Take for example finding a command that can find active directory users. We can type in the PowerShell console:
 
 ```
 Get-command get-*user -module active*
@@ -46,9 +46,9 @@ CommandType     Name                                               Version    So
 Cmdlet          Get-ADUser                                         1.0.0.0    activedirectory
 ```
 
-So what happened there? We asked Powershell to look for any commands to list active directory users. Notice how versatile the search can be. We were not quite sure what the full command was but because of the verb-noun structure we know that when we could pass in parameters to the command to filter what we want. Powershell understand wildcarding for values in the parameter. NB. Parameters can be discovered by typing - after a command and pressing tab. Powershell will cycle through the available options if it recognizes the command. If it doesn't the cmdlet doesnt exist. 
+So what happened there? We asked PowerShell to look for any commands to list active directory users. Notice how versatile the search can be. We were not quite sure what the full command was but because of the verb-noun structure we know that when we could pass in parameters to the command to filter what we want. PowerShell understand wildcarding for values in the parameter. NB. Parameters can be discovered by typing - after a command and pressing tab. PowerShell will cycle through the available options if it recognizes the command. If it doesn't the cmdlet doesnt exist. 
 
-Some people have said that Powershell is too verbose, too wordy. The previous example really shows one of the reason why. Discoverability! It can be easier to discover commands. In order to get the list of approved verbs we can type Get-Verb.
+Some people have said that PowerShell is too verbose, too wordy. The previous example really shows one of the reason why. Discoverability! It can be easier to discover commands. In order to get the list of approved verbs we can type Get-Verb.
 
 ### Get-Help
  Once we have found the command that we want how can we get information on how to use it?
@@ -70,7 +70,7 @@ get-help get-aduser -online
 ```
 
 ### Get-Member
-Powershell is object oriented. This means that wnen I run a command it outputs an object. I can see the properties  and methods that are associated with the object. I'll be discussing more in detail in regards to this in a  later post but I'll go over the basics here.
+PowerShell is object oriented. This means that wnen I run a command it outputs an object. I can see the properties  and methods that are associated with the object. I'll be discussing more in detail in regards to this in a  later post but I'll go over the basics here.
 
 #### Properties
 Properties describe the object. If you have learnt other  languages like Python this is also commonly known as attributes.
@@ -81,7 +81,7 @@ For example if I type:
 get-childitem c:\windows\temp | get-member -Type Properties
 ```
 
-Powershell will return 
+PowerShell will return 
 
 ```
 
@@ -148,7 +148,7 @@ VersionInfo       ScriptProperty System.Object VersionInfo {get=[System.Diagnost
 ```
 Lo and behold, here are the properties of the object for get-childitem.
 
-So lets examine what we just did. We asked Powershell to retrieve the items in the path
+So lets examine what we just did. We asked PowerShell to retrieve the items in the path
 ```
 get-childitem c:\windows\temp
 ```
