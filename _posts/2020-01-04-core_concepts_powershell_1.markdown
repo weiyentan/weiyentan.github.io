@@ -12,9 +12,9 @@ After much discussion one of the member's suggested that I consolidate that into
 
 This will be a few part mini post series. This post will be focused on the basics to get started with PowerShell. 
 
-I started learning PowerShell and went under the virtual grand tutelage of [@concentrateddon](https://twitter.com/concentrateddon) through video tutorials of CBT nuggets at the time which was in 2015. This is by far the best training materials that I have started with in my Powershell learning career. 
+I started learning PowerShell and went under the virtual grand tutelage of [@concentrateddon](https://twitter.com/concentrateddon) through video tutorials of CBT nuggets at the time which was in 2015. This is by far the best training materials that I have started with in my PowerShell learning career. 
 
-Commands in PowerShell are called cmdlets. According to [@jsnover](https://twitter.com/jsnover) There is some trivia behind this. That is because cmdlets is unique. If you look on any search engine and you type in cmdlet the results that you get returned back is Powershell. 
+Commands in PowerShell are called cmdlets. According to [@jsnover](https://twitter.com/jsnover) There is some trivia behind this. That is because cmdlets is unique. If you look on any search engine and you type in cmdlet the results that you get returned back is PowerShell. 
 
 For Microsoft that is instant SEO! 
 
@@ -70,7 +70,7 @@ get-help get-aduser -online
 ```
 
 ### Get-Member
-PowerShell is object oriented. This means that wnen I run a command it outputs an object. I can see the properties  and methods that are associated with the object. I'll be discussing more in detail in regards to this in a  later post but I'll go over the basics here.
+PowerShell is object oriented. This means that when I run a command it outputs an object. I can see the properties  and methods that are associated with the object. I'll be discussing more in detail in regards to this in a  later post but I'll go over the basics here.
 
 #### Properties
 Properties describe the object. If you have learnt other  languages like Python this is also commonly known as attributes.
@@ -185,7 +185,7 @@ C:\Users\weiyentan\AppData\Local\Temp\chrome_drag10112_1246353191               
 #### Methods
 Methods are the doing things that you can perform against the object. 
 
-Lets take the previous example of querying the c:\windows\temp directory but this time we ask for the methods that we use against that object.
+Lets take the previous example of querying the c:\windows\temp directory but this time we ask for the methods that we can use against that object.
 
 ```
 get-childitem c:\windows\temp | Get-Member -MemberType methods
