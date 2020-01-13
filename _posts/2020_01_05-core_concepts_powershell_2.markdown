@@ -1,5 +1,5 @@
 ---
-title:  Core concepts  PowerShell - Workhorse Commands
+title:  "Core concepts  PowerShell - Workhorse Commands"
 comments: true
 date:   2020-01-05 12:31:23
 categories: [learning]
