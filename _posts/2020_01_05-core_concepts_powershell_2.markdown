@@ -127,23 +127,23 @@ Here is the list:
 | Comparison Operator | Description |
 | --------------------|------------ |
 |   -eq               | This means equal. get-childitem $env:temp | where-object {$_extension -eq .xml}|
-|                     | This finds all the files in the $env:temp directory that has the extension xml. One thing to note this absolute. You cannot use wild cards here. If you want to use wildcards you have to use -like|
+|                     | This finds all the files in the $env:temp directory that has the extension xml. One thing to note this absolute. You cannot use wild cards here. Use -like if you want to use wildcards |
 |   -ne               | This is the opposite of -eq.   get-childitem $env:temp | where-object {$_.extension -ne .xml}|
-|                     | This finds all the files in the $env:temp directory that does not have  extension xml. One thing to note this absolute. You cannot use wild cards here. If you want to use wildcards you have to use -like|
+|                     | This finds all the files in the $env:temp directory that does not have  extension xml. One thing to note this absolute. If you want to use wildcards you have to use -notlike |
 |   -gt               | This means greater than . Get-ChildItem $env:temp -Recurse | Where-Object {$_.lastaccesstime -gt ((Get-date).adddays(-3)} |
-|                     | These gets the files that have been accessed three days ago. (Get-Date) is an object and we use the method of adddays to add -3 days. PowerShell knows how to use this with  the comparison operators.|
+|                     | These gets the files that have been accessed three days ago. (Get-Date) is an object and we use the method of adddays to add -3 days.|
 |   -ge               | Greater than or Equals to. This works in much the same way as -gt but includes the value compared against.
-|   -lt               | Less than .Its used the same as gt but in reverse.
-|   -le               |  Less than or equals to .Its used the same as gt but in reverse.     |
-|   -Like             |  Like is similar to -eq but you can use wild cards with like .  
+|   -lt               | Less than .Its used the same as gt but in reverse.|
+|   -le               |  Less than or equals to .Its used the same as gt but in reverse.|
+|   -Like             |  Like is similar to -eq but you can use wild cards with like .  |
 |                     | get-childitem $env:temp | where-object {$_.fullname  -like "*listservers*" }|
 |   -NotLike          | Notlike is the opposite of like but you can use it in the same way as like. It will exclude the terms that you put in. |
 |   -Match            | This uses regex to match  get-childitem -recurse | where-object {$_.fullname  -match "tables"} |
 |                     | This  searches the file listing with get-childitem and finds files with the regex 'tables'|
-|   -NotMatch         | This is the opposite of match and removes the  objects that matches the regex. 
-|   -Contains         | This expression relates to whether or not an item exists in a collection of items. The idea is that you provide a collection of objects and then detects whether the item exists in the collection
-|                     |  ((get-childitem -recurse).name) -contains 'tables.scss' This extrapolates the properties of name in the current directory and detects whether it contains the file tables.scss. If it exists it will show a ||                     |  boolean true or false
-|   -NotContains      | This is the opposite of -contains 
+|   -NotMatch         | This is the opposite of match and removes the  objects that matches the regex. |
+|   -Contains         | This expression relates to whether or not an item exists in a collection of items. The idea is that you provide a collection of objects. It detects whether the item exists in the collection |
+|                     |  ((get-childitem -recurse).name) -contains 'tables.scss' This shows properties of name in the current directory and detects whether it contains the file tables.scss. Shows true or false |
+|   -NotContains      | This is the opposite of -contains  |
 |   -In               | This is the same  as contains but its the opposite way of writing. 'tables.scss' -in ((get-childitem -recurse).name) |
 |   -NotIn            | Opposite of -In |
 |   -Replace          | Replaces a text. 'tables.scss' -replace 'tables.scss', 'test'|
