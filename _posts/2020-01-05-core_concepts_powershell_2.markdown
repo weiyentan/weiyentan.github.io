@@ -125,6 +125,7 @@ Get-Help about_Comparison_Operators
 Here is the list:
 
 | Comparison Operator | Description |
+
 | --------------------|------------ |
 |   -eq               | This means equal. get-childitem $env:temp | where-object {$_extension -eq .xml}|
 |                     | This finds all the files in the $env:temp directory that has the extension xml. One thing to note this absolute. You cannot use wild cards here. Use -like if you want to use wildcards |
