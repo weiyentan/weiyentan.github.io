@@ -75,7 +75,11 @@ displayed those properties  only displaying the first 5.
 
 So the question might be: how do I know what properties to return? I cannot see the property that I am looking for....
 
-This is where the Get-Member cmdlet is so invaluable. In the previous cmdlet we can see the properties of the cmdlet by typing Get-Childitem c:\temp | Get-Member -MemberType property
+This is where the Get-Member cmdlet is so invaluable. In the previous cmdlet we can see the properties of the cmdlet by typing:
+```PowerShell
+Get-Childitem c:\temp | Get-Member -MemberType property
+```
+
 
 ```PowerShell
    TypeName: System.IO.FileInfo
