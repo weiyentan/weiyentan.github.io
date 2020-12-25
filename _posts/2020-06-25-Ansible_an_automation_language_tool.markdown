@@ -32,4 +32,11 @@ Ansible plays a role here because its main power is that it brings together into
 
 These can be summarised down to 'roles', pieces of automation and can be layered together.
 
+It is also declarative/idempotent  which is very different than what what we do in PowerShell. In PowerShell you have to define flow and logic and have a whole lot of conditionals.
+
+While other configuration platforms like Puppet and Chef have this too, Ansible does this better because it is a push configuration. Ansible is the controller. You can sequence a workflow on groups of different servers.
+
 I have experienced both sides of the spectrum using PowerShell as 'wrapper scripts' and using Ansible. While there is a tiny bit more upfront work with Ansible in terms of defining where the roles come from , I have always found it easier to piece together a playbook than writing scripts.
+## The cases where ansible does not seem to fit?
+As  a Windows admin and more importantly PowerShell Core + using Ansible Tower there are times where using Ansible Tower seems over the top. One of those situations is break fix type scenarios. In Ansible Tower in order to add automation you have to add it in through a repository. In a break/fix scenario, where urgency is of importance and that is where PowerShell / Bash can do things quickly done . Sure , at a later stage the process can be added to the Tower environment to handle the issues in the future but at the time of the incident using command line to fix undiscovered issues is probably the best course of action.
+
