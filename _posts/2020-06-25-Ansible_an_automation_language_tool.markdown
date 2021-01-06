@@ -14,7 +14,7 @@ On the flip side I have also heard system engineers (who know Bash/PowerShell) s
 
 I cringe when I hear these two statements. Here are my thoughts on the matter.
 
-** The case for ansible
+## The case for ansible
 
 Don't get me wrong. Using cmdline shell languages like Bash or PowerShell is great. In PowerShell I can create multiple sessions to servers I want to retrieve information from and I get instant results. I can also change state. If something is not in the right state or I want something changed linux /windows engineers can write a quick script  and perform that task.
 That works when you are working on a smaller subset of tasks related to a small number of servers for example configuring os settings for region. You just need one script. 
