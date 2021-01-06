@@ -22,4 +22,4 @@ What does this give me?  What it means is that I could have a group called webs
 Lets say I have a variable called foo_settings that I need to apply across both sqlservers and webservers group.
 On sqlservers group the value needs to be 'sqlserver_settings' and webservers group needs to have 'webserver_settings' applied to it.
 My data folder structure looks like this:
-![example_Jekyll_structure](/assets/2021-01-06 18_06_04-Using_groupvars_to_your_advantage_diagram1.png)
+![ansible_folder_structuture](/assets/2021-01-06 18_06_04-Using_groupvars_to_your_advantage_diagram1.png)
