@@ -130,9 +130,10 @@ Here is an explaination of some of the things I did.
 ```
 The default pip3 image does not work. I experienced a whole lot of issues with it despite what people said.
 
-```bash 
+ 
 When I tried to use the  default image or any images in quay.io I would get this error in the Ansible job template screen:
 
+```bash
 Traceback (most recent call last):
   File "/var/lib/awx/venv/awx/lib64/python3.8/site-packages/awx/main/tasks.py", line 1397, in run
     res = receptor_job.run()
