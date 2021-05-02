@@ -21,7 +21,7 @@ python3 -m venv ~/venv/ansible-builder
 source ~/venv/ansible-builder/bin/activate
 pip3 install ansible-builder==1.0.0.1a
 ```
-Its important that you choose 1.0.0.1a because the default gives you 0.6 which will borks the compilation the dockerfile.
+Its important that you choose 1.0.0.1a because the default gives you 0.6 which will bork the installation of your Execution Environment.
 
 Now its time to create your files that will make up your Ansible builder.
 
@@ -42,7 +42,7 @@ This is what your ansible requirement would typically look like. The examples th
 This is your python dependencies that you might want in your container. This is what used to be the old virtual environments in previous builds of AWX.
 
 My files look like this:
-## execution environment
+## execution-environment.yml
 
 ```yml
 ---
@@ -156,7 +156,12 @@ After adding to this [thread](https://github.com/ansible/awx/issues/9917) I foun
 
 So what you should have is a working directory with all the files in it.
 
-I also created a directory called context in the working directory. In that I copied run.sh and made it executable chmod + x run.sh on both files. This is a crucial step otherwise it can't be executed in the container and it will come up with permission denied errors.
+I also created a directory called context in the working directory. In that I copied run.sh and made it executable 
+```
+chmod + x run.sh 
+```
+
+I do this on both files.  This is a crucial step otherwise it can't be executed in the container and it will come up with permission denied errors.
 
 To build your container you write something similar to the following:
 
@@ -165,13 +170,13 @@ ansible-builder build --tag registry_tag
 ```
 where registry tag is your image registry. Don't forget to login to your container registry with either:
 
-* docker login registry_url 
-* podman login registry_url
+* docker login[REGISTRY_URL] 
+* podman login [REGISTRY_URL]
 
 You can then push this to your registry using either of the commands depending on what you are using. 
 
-* docker push registry_tag
-* podman push  registry_tag
+* docker push [REGISTRY_TAG]
+* podman push  [REGISTRY_TAG]
 
 In AWX if you are admin  you will see Execution Environments on the left hand side under Administration.
 Click on it and you will be presented with a screen with a list of images. Click Add. Fill out the values appropriately.
@@ -179,6 +184,12 @@ Click on it and you will be presented with a screen with a list of images. Click
 When it comes to using it in your automation you can set them in projects or job templates of AWX.
 
 One tip. Sometimes I found my docker image to be too large so my kubernetes cluster had problems downloading it. The solution was to pull down the image onto my nodes BEFORE I added that to AWX.
+
+This was done with:
+```bash 
+docker pull [REGISTRY_URL]
+podman pull [REGISTRY_URL]
+```
 
 I hope that this helps any of you that is having problems getting their execution environments working. 
 
