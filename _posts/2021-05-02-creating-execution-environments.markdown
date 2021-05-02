@@ -80,7 +80,7 @@ git-lfs [platform:rpm]
 
 ```
 
-bindep.txt
+requirements.txt
 
 ```bash
 
