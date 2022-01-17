@@ -1,7 +1,7 @@
 ---
 title:  "Provisioning and Configuring k8s clusters"
 comments: true
-date:   2022-01-01 09:30
+date:   2022-01-01 09:30:00
 categories: [kubernetes]
 tags: [howto]
 ---
