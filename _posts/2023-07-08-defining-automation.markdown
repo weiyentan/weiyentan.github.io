@@ -12,14 +12,24 @@ I think the more interesting question is what does automation consist of? Becaus
 
 There is no doubt that these all contribute automation. However the process to write , test , implement the automation is where I think the magic starts to happen. As an ex colleague of mine said, when I demonstrated the concept this is what you call by end to end automation.
 
-In my mind, automation consists of three main parts.
+In my mind, automation consists of four main parts.
 
 * Plumbing
-* Frameworks
+* Orchestration/Configuration Management
 * Flow
 
 # Plumbing
-These are programming languages. PowerShell, Bash, Go, Python.  While they can exist on their own, and they could overlap the other two  I have found that these are best served  
-# Frameworks
+These are programming languages. PowerShell, Bash, Go, Python.  While they can exist on their own, and they could overlap the other two  I have found that these are best served  in a framework or exist in a flow category. Plumbing tools contain logic and various complexities. 
+
+# Orchestration/Configuration Management
+Programs that are designed for Orchestration  are systems that are designed to layer and order your automation. With these systems these are not designed to be programmed. You are just there to declare a state. 
+
+Underneath the hood the plumbing tools are being used to handle what needs to be done. 
+
+Configuration Management fits into this mode as well. Configuration Management philosophy is idempotent. This means that you declare what you want and underneath the hood your plumbing tools are doing all this. These programs are designed to take inputs and then pass that into the plumbing tools.
+
+Tools like Ansible, Puppet/Bolt
 
 # Flow
+These programs fit into a category like Devops tools like Pipelines. There is an overlap with tools like AWX / Ansible Automation Tower. Suffice to say that these spots are not to have any logic. Its just a directive to say run this. Do that.
+
