@@ -28,7 +28,7 @@ Underneath the hood the plumbing tools are being used to handle what needs to be
 
 Configuration Management fits into this mode as well. Configuration Management philosophy is idempotent. This means that you declare what you want and underneath the hood your plumbing tools are doing all this. These programs are designed to take inputs and then pass that into the plumbing tools.
 
-Tools like Ansible, Puppet/Bolt
+Tools like Ansible, Puppet/Bolt are an example of this.
 
 # Flow
 These programs fit into a category like Devops tools like Pipelines. There is an overlap with tools like AWX / Ansible Automation Tower. Suffice to say that these spots are not to have any logic. Its just a directive to say run this. Do that.
