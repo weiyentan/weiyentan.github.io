@@ -12,7 +12,7 @@ I think the more interesting question is what does automation consist of? Becaus
 
 There is no doubt that these all contribute automation. However the process to write , test , implement the automation is where I think the magic starts to happen. As an ex colleague of mine said, when I demonstrated the concept this is what you call by end to end automation.
 
-In my mind, automation consists of four main parts.
+In my mind, automation consists of three main parts.
 
 * Plumbing
 * Orchestration/Configuration Management
