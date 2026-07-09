@@ -7,3 +7,6 @@ _site
 
 # Ignore orchestration workspace .status/ directories
 .status/
+
+# Ignore Gemfile.lock — managed by legacy GitHub Pages builder, triggers false Dependabot alerts
+Gemfile.lock
