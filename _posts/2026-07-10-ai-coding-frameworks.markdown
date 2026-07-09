@@ -6,6 +6,7 @@ categories:
   - general
 tags:
   - ai
+image: /images/cover.jpg
 ---
 
 I've used AI in my coding workflow right from the start. At first that meant ChatGPT in a browser, then integrations moved into IDEs. That shift was the real beginning of using a proper "harness" — a framework around an LLM that lets it interact with tools, files, repos, CLIs, issue trackers, and automation systems.
