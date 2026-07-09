@@ -1,7 +1,7 @@
 ---
 title: "AI Coding Frameworks"
 comments: true
-date: 2026-07-10 10:00:00
+date: 2026-07-10 10:00:00 +1200
 categories:
   - general
 tags:
