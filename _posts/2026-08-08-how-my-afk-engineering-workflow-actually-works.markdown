@@ -420,7 +420,7 @@ Event-Driven Ansible
    Agent workflow
 ```
 
-<figure style="margin-left: -10%; margin-right: -10%;">
+<figure style="margin-left: -20%; margin-right: -20%;">
   <img src="/assets/afk-lifecycle-diagram.png" 
        alt="AFK Engineering Workflow Lifecycle" 
        style="width:100%;">
