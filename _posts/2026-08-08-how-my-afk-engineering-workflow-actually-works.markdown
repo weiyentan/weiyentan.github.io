@@ -420,7 +420,11 @@ Event-Driven Ansible
    Agent workflow
 ```
 
-![AFK Engineering Workflow Lifecycle](/assets/afk-lifecycle-diagram.png)
+<figure style="margin-left: -10%; margin-right: -10%;">
+  <img src="/assets/afk-lifecycle-diagram.png" 
+       alt="AFK Engineering Workflow Lifecycle" 
+       style="width:100%;">
+</figure>
 
 A webhook hits my FastAPI application, which validates and normalises
 the event before publishing it into Kafka.
