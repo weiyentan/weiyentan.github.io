@@ -421,9 +421,11 @@ Event-Driven Ansible
 ```
 
 <figure style="margin:0;">
-  <img src="/assets/afk-lifecycle-diagram.png"
-       alt="AFK Engineering Workflow Lifecycle"
-       style="display:block; width:140%; max-width:none; height:auto;">
+  <a href="/assets/afk-lifecycle-diagram.png" target="_blank" rel="noopener">
+    <img src="/assets/afk-lifecycle-diagram.png"
+         alt="AFK Engineering Workflow Lifecycle"
+         style="display:block; width:140%; max-width:none; height:auto;">
+  </a>
 </figure>
 
 A webhook hits my FastAPI application, which validates and normalises
