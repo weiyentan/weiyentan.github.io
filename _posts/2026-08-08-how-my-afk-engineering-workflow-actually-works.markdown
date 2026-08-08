@@ -420,10 +420,10 @@ Event-Driven Ansible
    Agent workflow
 ```
 
-<figure style="margin-left: -20%; margin-right: -20%;">
-  <img src="/assets/afk-lifecycle-diagram.png" 
-       alt="AFK Engineering Workflow Lifecycle" 
-       style="width:100%;">
+<figure>
+  <img src="/assets/afk-lifecycle-diagram.png"
+       alt="AFK Engineering Workflow Lifecycle"
+       style="display:block; width:140%; max-width:none; margin-left:-20%;">
 </figure>
 
 A webhook hits my FastAPI application, which validates and normalises
