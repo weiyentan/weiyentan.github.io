@@ -35,6 +35,12 @@ is supposed to achieve. It captures the problem, goals, scope, requirements,
 constraints and acceptance criteria before that work is broken down into
 implementation tasks.
 
+A **directed acyclic graph (DAG)** is a collection of work items connected by
+dependencies that point in one direction and never form a loop. In this
+workflow, each issue is a work item: an issue can become ready when the issues
+it depends on have been completed, while independent issues can proceed in
+parallel.
+
 From there, the PRD becomes implementation issues, and those issues form the
 dependency graph the AFK workflow executes.
 
