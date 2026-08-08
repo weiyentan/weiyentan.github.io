@@ -168,6 +168,40 @@ idea, and the Council pushes on it: assumptions, boundaries,
 alternatives, failure modes, unnecessary complexity and decisions I may
 be making without realising I have made them.
 
+Each Council member plays a distinct role. The **Product Owner**
+validates whether the problem is real, whether the proposed value is
+genuine, and whether the scope is right-sized. The **Platform
+Architect** pushes on architectural boundaries, operational concerns
+and blast radius --- what does this change touch, and does the
+architecture actually support it? The **Senior Engineer** validates
+complexity, edge cases and maintainability --- is this the simplest
+version that works, and can someone else pick it up later? The
+**Delivery Planner** validates the decomposition into issues and cost
+efficiency --- does this break down into work that is genuinely
+independent, and are the issue sizes sensible?
+
+The Council operates in up to two rounds. In each round, every role
+writes an independent opinion. There is a convergence gate between
+rounds: if average confidence is at least 0.85, there is no dissent,
+and no role has made round-two requests, the second round is skipped.
+That keeps the process lightweight when an idea is already solid,
+while still allowing a second pass when the first round surfaces
+genuine disagreement.
+
+For low-risk ideas, the full four-role Council is overkill. I use a
+lightweight tier instead: just the **Product Owner** plus one
+technical role. That keeps the overhead proportional to the risk.
+
+The output of the Council process is stored under
+`.ai/council/{session-id}/` --- the individual briefs, per-role
+opinions, the decision YAML, PRD outlines and issue breakdowns. Those
+artifacts become part of the durable project context that downstream
+agents can read.
+
+And a scope reminder: the Council exists for greenfield projects
+only. If I am adding a feature to an existing codebase, the
+architecture is already decided. The Council is not relevant there.
+
 The purpose is not to generate code. The purpose is to make the idea
 harder to misunderstand.
 
@@ -385,6 +419,8 @@ Event-Driven Ansible
         v
    Agent workflow
 ```
+
+![AFK Engineering Workflow Lifecycle](/assets/afk-lifecycle-diagram.png)
 
 A webhook hits my FastAPI application, which validates and normalises
 the event before publishing it into Kafka.
